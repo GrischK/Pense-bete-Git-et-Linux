@@ -1,0 +1,190 @@
+body {
+    background-color: blanchedalmond;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -90px;
+    width: 50%;
+}
+
+.flex-container1 {
+    display: flex;
+}
+
+#flex-container2 {
+    list-style: none;
+    display: flex;
+}
+
+#logo {
+    height: 150px;
+    border: 2px solid rgb(11, 11, 92);
+    border-radius: 50% 50%;
+}
+
+#flex-container2 li{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+h1,h2,h3{
+    color: white;
+}
+
+#blocintro {
+    background-image: url(img/bodyimg.jpg);
+    background-size: cover;
+    width: auto;
+    height: 500px;
+}
+
+#blocintro h1{
+    padding-top: 100px;
+    padding-left: 5px;
+    color: white;
+}
+
+#blocintro h2,ol,p{
+    color: white;
+    padding-left: 5px;
+}
+
+#blocintro li{
+    margin-left: 15px;
+    padding-top: 5px;
+}
+
+#blocintro a:link{
+    color: white;
+}
+
+#blocintro a:visited{
+    color:rgb(50, 122, 205);
+}
+
+#space{
+    height: 80px;
+}
+
+#gittext{
+    background-image: url(  img/backimg.jpg);
+    background-attachment: fixed;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: justify;
+    padding-bottom: 15px;
+}
+
+#linuxtext{
+    background-image: url(img/linuxbackimg.jpg);
+    background-attachment: fixed;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: justify;
+    padding-bottom: 15px;
+}
+
+#hometext{
+    background-image: url(img/homebackimg.jpg);
+    height: auto;
+}
+
+#gittext h2{
+    padding-left: 5px;
+    padding-top: 5px;
+    margin-top: 50px;
+}
+
+#linuxtext h2{
+    padding-left: 5px;
+    padding-top: 5px;
+    margin-top: 50px;
+}
+
+#gittext h3{
+    margin-top: 40px;
+    margin-bottom: -10px;
+    padding-left: 45px;
+    color: burlywood;
+}
+
+#linuxtext h3{
+    margin-top: 40px;
+    margin-bottom: -10px;
+    padding-left: 45px;
+    color: burlywood;
+}
+
+#gittext p{
+    padding-right: 15px;
+}
+
+br{
+    margin-bottom: 5px;
+}
+
+.emspace{
+    padding-left: 30px;
+}
+
+.tips{
+    border: 1px solid burlywood;
+    width: 500px;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 15px;
+    background:rgb(37, 57, 129)
+}
+
+#depositorylist li{
+    color:white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+strong{
+    color: rgb(190, 133, 47);
+}
+
+#gittextblock{
+    width: 1100px;
+    margin: 0 auto;
+}
+
+#linuxtextblock{
+    width: 1100px;
+    margin: 0 auto;
+    color: white;
+}
+
+#hometextblock{
+    width: 1100px;
+    margin: 0 auto;
+}
+
+
+.squarestyle{
+    border: 1px solid white;
+    padding:1px 1px 1px 1px;
+    background:gray;
+}
+
+#hometextblock ol{
+    margin-left: 30px;
+}
+
+.border {
+    border-left: 3px dashed burlywood;
+}
+
+#linuxcommandlist{
+    list-style: none;
+}
+
+#linuxcommandlist li{
+    padding: 3px;
+}

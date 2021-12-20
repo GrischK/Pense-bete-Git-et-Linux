@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Fiche de révision Git</title>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <nav class="flex-container">
+            <a href="home.html"><img src="img/logo.png" alt="logoeduc" id="logo" /></a>
+            <ul id="flex-container2">
+                <li><a href="home.html">Accueil</a></li>
+                <li>|</li>
+                <li><a href="Git.html">Git</a></li>
+                <li>|</li>
+                <li><a href="Linux.html">Linux</a></li>
+            </ul>
+        </nav>
+        <section id="blocintro">
+            <h1>Révisions des principales notions de Git</h1>
+            <p>Pour ce rappel, j'ai utilisé la ressource <a href="https://github.com/jgm/gitit/archive/refs/heads/master.zip">GitIt.</a></p>
+            <p>Il est nécessaire de disposer de <a href="https://desktop.github.com/">GitHub Desktop.</a></p>
+        </section>
+        <div id=space>
+        </div>
+        <section id="gittext">
+            <div id="gittextblock">
+
+                <div class="border">
+                    <h2>1.Configurer Git</h2>
+                    <p>Une fois que GitHub Desktop (et donc Git) est installé, ouvrez votre terminal . Vous pouvez vérifier que Git existe vraiment en tapant:<br/>
+                    <em class="emspace">git --version</em></p>
+                    <p>Cela renverra la version de Git sur votre ordinateur et ressemblera à ceci:<br/>
+                    <em class="emspace">git version 1.9.1</em></p>
+                    <p>Ensuite, configurez Git afin qu'il puisse vous associer votre travail.<br/>
+                    Définissez votre nom:<br/>
+                    <em class="emspace">git config --global user.name "Your Name"</em></p>
+                    <p>Maintenant configurez votre courrier électronique:<br/>
+                    <em class="emspace">git config --global user.email "youremail@example.com"</em></p>
+                    <p>Vous avez fini avec le premier défi! Cliquez sur le bouton "Vérifier" pour vérifier le défi.</p>
+                </div>
+                
+                <div class="border">
+                    <h2>2.Les dépôts</h2>
+                    <p>Un dépôt est un ensemble d'éléments liés. Dans notre cas, l'écriture de logiciels, c'est une collection de fichiers liés à un projet. Vous pouvez l'imaginer comme un dossier de projet avec tous les éléments pertinents à l'intérieur de celui-ci. En fait, c'est ce à quoi il ressemblera sur votre ordinateur. Vous trouverez aussi les appellations "Référentiel", "Repositorie" ou plus simplement "Repo" pour parler de dépôt.<br/>
+                    Vous dites à Git quel est votre projet et Git va commencer à suivre toutes les modifications apportées à ce dossier. Cela en fait un dépôt Git: un dossier suivi par Git. Git suit lorsque les fichiers sont ajoutés, soustraits ou même modifiée (que ce soit d'une seule lettre ou en intégralité). En plus de cela Git suit qui à apporté ces modifications. Dans l'univers du développement logiciel, ce suivi des modifications s'appellent la gestion de version.</p>
+                    <h3>Créer un dépôt</h3>
+                    <p>Vous allez créer un nouveau dossier de projet puis l'initialiser en tant que dépôt Git. Nommer le dossier 'hello-world' dans ce défi, vous pouvez choisir un nom différent si vous avez déjà un dossier nommé ainsi (c'est un nom commun en informatique).<br/>
+                    Ouvrez votre terminal!</p>
+                    <p>Dans la fenêtre de votre terminal, tapez ces commandes, une à la fois, en appuyant sur la touche "Entrée" pour valider votre saisie.<br/>
+                    Tout d'abord, créez un nouveau dossier: <strong>(Astuce: mkdir signifie make directory)</strong><br/>
+                    <em class="emspace">mkdir hello-world</em></p>
+                    <p>Ensuite, entrez dans ce dossier:Astuce: <strong>(Astuce: cd signifie change directory)</strong><br/>
+                    <em class="emspace">cd hello-world</em></p>
+                    <p>Enfin, dites à Git d'initialiser(démarrer le suivi) du dossier dans lequel vous êtes:<br/>
+                    <em class="emspace">git init</em></p>
+                    <p>La dernière commande devrait renvoyer quelque chose commençant par "Initialized empty Git repository". Les autres commandes ne renvoie rien.<br/>
+                    Vous l'avez fait! Si vous voulez être sûr que c'est un dépôt Git, tapez <em>git status</em> et s'il ne vous retourne pas 'fatal: Not a git repository...' c'est que tout est parfait !</p>
+                </div>
+            
+
+                <div class="border">
+                    <h2>3.Les commits</h2>
+                    <p>Les commits sont essentiels à l'utilisation de Git. Ce sont les moments où vous enregistrez et décrivez le travail que vous avez accompli. Ils sont les instants clefs dans la chronologie de l'historique du projet.</p>
+                    <h3>Créer un nouveau fichier</h3>
+                    <p>Maintenant que vous avez un référentiel commencé, ajoutez-y un fichier.<br/>
+                    Ouvrez votre éditeur de texte et créez un nouveau fichier vide. Maintenant, écrivez un peu de texte, tapez peut-être "Bonjour!", et enregistrez le fichier sous «readme.txt» dans le dossier «hello-world» que vous avez créé lors du précédent défi.</p>
+                    <h3>Vérifier l'état + ajouter et soumettre les modifications</h3>
+                    <p>Ensuite, vérifiez le statut de votre dépôt pour savoir s'il y a eu des changements. Vous savez que vous avez changé quelque chose , mais Git le sait-il aussi ?<br/>
+                    Assurez-vous que vous êtes toujours dans votre répertoire «hello-world» lorsque vous exécutez ces commandes. Utilisez maintenant Git pour voir ce qui a changé dans votre dépôt:<br/>
+                    <p>Tout d'abord, vérifiez le statut:<br/>
+                    <em class="emspace">git status</em></p>
+                    <p>Git devrait vous dire qu'un fichier a été ajouté.</p>
+                    <p>Puis ajouter le fichier que vous venez de créer afin qu'il devienne une partie des modifications que vous soumettez avec Git:<br/>
+                    <em class="emspace">git add readme.txt</em></p>
+                    <p>Enfin, soumettez (commit) ces modifications à l'historique du dépôt avec un court (m) message décrivant les mises à jour.<br/>
+                    <em class="emspace">git commit -m "Création du fichier readme"</em></p>
+
+                    <h3>Étape: Effectuez plus de modifications</h3>
+                    <p>Ajoutez une autre ligne au fichier "readme.txt" et enregistrez le fichier à nouveau.<br/>
+                    Dans le terminal, vous pouvez afficher les différences entre le fichier actuel et la dernière version soumise.</p>
+                    <p>Dites à Git de vous afficher le diff:<br/>
+                    <em class="emspace">git diff</em></p>
+                    <p>Maintenant, avec ce que vous venez d'apprendre ci-dessus, soumettez ces derniers changements.</p>
+                </div>
+
+                <div class="border">
+                    <h2>4.GitHub</h2>
+                    <p>Le dépôt que vous avez créé jusqu'à présent est juste sur votre ordinateur, ce qui est pratique, mais il est très difficile de le partager pour travailler avec d'autres. Pas de soucis, c'est ce à quoi GitHub est destiné!</p>
+                    <p>GitHub est un site Web qui permet aux personnes de partager leur travail grâce à Git. Tout le monde pourra ainsi travailler ensemble sur le même projet. GitHub est un dépôt central pour vous et tous vos potentiels collaborateurs. Dans ce dépôt vous pourrez y pousser vos modifications et aussi y récupérer celles des autres.</p>
+                    <h3>Créer un compte GitHut</h3>
+                    <p>Visitez <a href="https://github.com/">gitub.com</a> et inscrivez-vous pour un compte gratuit. Félicitation et bienvenue chez les githubers!</p>
+                    <h3>Ajouter le nom d'utilisateur GitHub à Git</h3>
+                    <p>Ajoutez votre nom d'utilisateur GitHub à votre configuration Git. Nous le faisons pour l'amour de Git-it; Cela facilite la vérification des défis à venir. Enregistrez-le exactement comme vous l'avez créé sur GitHub avec les mêmes majuscules et minuscules. Notez que vous n'avez pas besoin d'entrer le "& # 60;" et "& # 62;".</p>
+                    <p>Ajoutez votre nom d'utilisateur GitHub à votre configuration Git:<br/>
+                    <em class="emspace">git config --global user.username &lt;USerNamE&gt;</em></p>
+                    <p>Vous pouvez vérifier ce que vous avez configuré dans Git en tapant:<br/>
+                    <em class="emspace">git config --global user.username</em></p>
+                    <p class="tips">Assurez-vous de taper " user.username " et non "user.name", qui remplacerait le nom que vous configuré dans le premier défi et vous laisserait sans une attribution correcte de vos contributions! Si vous vous êtes trompé, rien de grave, il faudra simplement répéter la configuration du premier premier défi pour ajouter votre nom.</p>
+                    <h3>Les noms d'utilisateur GitHub & Git ne correspondent pas</h3>
+                    <p>Une erreur de capitalisation peut faire que votre nom d'utilisateur GitHub correspond au cas de celui que vous avez défini avec la commande <em>git config</em>. Par exemple, 'JLord' n'est pas le même que 'jlord'</p>
+                    <p>Pour changer votre nom d'utilisateur Git, il suffit de faire la même commande que précédemment, mais avec la bonne capitalisation:<br/>
+                    <em class="emspace">git config --global user.username &lt;USerNamE&gt;</em></p>
+                    <p>Lorsque vous avez effectué la mises à jour de votre configuration, vérifiez à nouveau!</p>
+                </div>
+
+                <div class="border">
+                    <h2>5.Les remotes</h2>
+                    <p>Lorsque vous mettez quelque chose sur GitHub, cette copie vit sur l'un des serveurs de GitHub. Cela en fait une copie distante (remote) car elle n'est pas sur votre ordinateur, mais sur un serveur "distant". En poussant (push) les modifications de votre dêpot local (celui sur votre ordinateur) sur votre "remote" maintenez à jour la copie partagée.</p>
+                    <p>Les autres peuvent toujours obtenir la derniere version de votre projet en tirant (pull) vos modifications à partir de votre "remote". C'est ainsi que chacun peut travailler sur un projet sans avoir besoin d'accéder à votre ordinateur où votre copie locale est stockée.</p>
+
+                    <h3>Créer un dépôt distant</h3>
+                    <p>Vous voulez synchroniser votre version local avec celle enregistrée sur GitHub.com. Créez d'abord un dépôt distant (remote) sur <a href="https://github.com/">GitHub.com</a>.</p>
+                        <ul id="depositorylist">
+                            <li>Aller à github.com , connectez-vous, puis cliquez sur '+' dans le haut À droite, puis cliquez sur 'New repository'.</li>
+                            <li>Donnez-lui un nom qui correspond au nom de votre dépôt local, 'hello-world', et une brève description.</li>
+                            <li>Rendez-le public. Cela signifie qu'il sera répertorié sur votre profil public.</li>
+                            <li>Ne pas initialiser avec un README car nous avons déjà un fichier, localement, nommé "readme.txt". Cette option de GitHub peut vous aider si vous ne l'aviez pas encore fait.</li>
+                            <li>Laissez «.gitignore» et «licence» définis sur «none». Nous n'utiliserons pas ces options dans ce tutoriel.</li>
+                            <li>Cliquer enfin sur "create repository"!</li>   
+                        </ul>
+                    <p class="tips">Readmes, .gitignores et Licenses<br/>
+                    Assurez-vous de taper " user.username " et non "user.name", qui remplacerait le nom que vous configuré dans le premier défi et vous laisserait sans une attribution correcte de vos contributions! Si vous vous êtes trompé, rien de grave, il faudra simplement répéter la configuration du premier premier défi pour ajouter votre nom.</p>
+                
+                    <h3>Connectez votre dépôt local à votre remote</h3>
+                    <p>Maintenant, vous avez créé un dépôt vide sur GitHub.com. En haut, vous verrez 'Configuration rapide', assurez-vous que le bouton "HTTPS" soit sélectionné et copiez l'adresse: c'est l'adresse de votre dépôt Git sur les serveurs de GitHub.</p>
+                    <p>Retour dans votre terminal, et à l'intérieur du dossier 'hello-world' que vous avez initialisé en tant que dépôt Git dans les défis précédents. Vous voulez que Git retienne l'adresse de la version à distance présente sur les serveurs de GitHub. Vous pouvez avoir plusieurs remotes, pour les différencier, chacun a un nom. Le remote principal est généralement appelé origin.</p>
+                    <p>Pour ajouter une télécommande nommée 'origine' à votre dépôt:<br/>
+                    <em class="emspace">git remote add origin &lt;URLFROMGITHUB&gt;</em></p>
+                    <p>Votre dépôt local sait maintenant où votre référentiel distant, nommé 'origin', se trouve sur les serveurs de GitHub. Pensez-y comme ajout d'un nom et d'une adresse sur la numérotation rapide, maintenant lorsque vous devez envoyer quelque chose là-bas, vous le pouvez.</p>
+                    <p class="tips">Utilisateurs Windows:<br/>
+                    Si vous avez GitHub Desktop sur votre ordinateur, une remote nommée 'origin' est automatiquement créé dans votre dépôt local. Dans ce cas, vous devrez préciser l'URL à associer à 'origin'. Utilisez cette commande au lieu du 'add' ci-dessus:<br/>
+                    <em class="emspace">git remote add origin &lt;URLFROMGITHUB&gt;</em></p>
+        
+                    <h3>Poussez votre travail dans votre remote</h3>
+                    <p>Ensuite, poussez (envoyer) tout ce que vous avez effectué localement dans votre dépôt distant sur GitHub. C'est quelque chose que vous ferez souvent pour que votre version à distance soit à jour et synchronisée avec l'état de votre version locale.</p>
+                    <p>Git dispose d'un système de branche afin que vous puissiez travailler sur différentes parties d'un projet à différents moments. Nous allons apprendre plus à ce propos par la suite, mais par défaut, la première branche est nommée «master». Lorsque vous poussez (et tirez plus tard) d'un projet, vous dites à Git le nom de branche que vous voulez ainsi que le nom du remote avec lequel vous voulez travailler.</p>
+                    <p>Dans ce cas, nous enverrons notre branche nommée 'master' à notre remote sur GitHub nommée 'origin'.<br/>
+                    <em class="emspace">git push origin master</em></p>
+                    <p>Maintenant, accédez à la page de votre dépôt sur GitHub.com et actualisez la page. Wow! votre dépôt distant est à jour avec le local. Félicitation vous avez créé votre premier dépôt public!</p>
+                </div>
+
+                <div class="border">
+                    <h2>6.Fork and Clones</h2>
+                    <h3>Fork</h3>
+                    <p>Jusqu'à présent, vous avez réalisé un projet localement et l'avez poussé à GitHub, mais ce n'est que la moitié du plaisir! L'autre moitié est de travailler avec d'autres personnes et d'autres projets.</p>
+                    <p>Lorsque vous forkez un dépôt, vous en créez une copie sur votre compte GitHub. Votre fork commence sa vie en tant que dépôt distant - Il existe juste sur votre compte GitHub, et non sur votre ordinateur. Les forks sont utilisées pour créer votre propre version d'un projet (cette différenciation de l'original est comme une sorte de bifurcation de la route du projet) ou contribuer en partageant vos modifications (telles que les corrections de bogues ou les nouvelles fonctionnalités) avec le projet original.</p>
+                    <p>Pour obtenir un dépot forké à partir de votre compte GitHub sur votre ordinateur, vous devez le cloner . Le clonage copie le dépôt distant sur votre ordinateur afin que vous puissiez travailler localement.</p>
+                    <h3>Forkez le dépôt Patchwork</h3>
+                    <p>Le projet avec lequel nous travaillerons est situé ici : <a href="github.com/jlord/patchwork">github.com/jlord/patchwork</a>. Accédez à cette page et cliquez sur le bouton 'Fork' en haut à droite. Une fois l'animation terminée, vous avez une copie de ce projet sur votre compte. Copiez l'URL HTTPS de votre fork dans la barre d'adresse de votre navigateur, c'est l'adresse de votre projet forké sur les serveurs de GitHub.</p>
+                    <h3>Clonage de votre fork en local</h3>
+                    <p>Maintenant, dans le terminal, vous clonez le référentiel sur votre ordinateur. Il créera automatiquement un nouveau dossier pour le dépôt. Assurez-vous de ne pas le cloner à l'intérieur d'un autre dossier contenant un dépôt Git!</p>
+                    <p>Assurez-vous de ne pas être dans le répertoire 'hello-world' des défis précédents. Pour sortir de ce dossier, afin de pouvoir cloner, procédez comme suit:</p>
+                    <p>Sortir du dossier 'hello-world': <strong>(Astuce: les deux points désignent le répertoire père.)</strong><br/>
+                    <em class="emspace">cd ..</em></p>
+                    <p>Maintenant que vous n'êtes plus dans un dépôt Git, clonez votre fork:<br/>
+                    <em class="emspace">git clone &lt;URLFROMGITHUB&gt;</em></p>
+                    <p>Entrez dans le dossier créé qui contient la copie locale de votre fork (dans ce cas, nommée 'patchwork').<br/>
+                    <em class="emspace">cd patchwork</em></p>
+                    <p>Maintenant, vous avez une copie du dépôt sur votre ordinateur et il est automatiquement connecté au dépôt distant (votre copie forkée) de votre compte GitHub. Tapez pour voir que l'adresse distante est déjà configurée: <br/>
+                    <em class="emspace">git remote -v</em></p>
+
+                    <h3>Connectez-vous au dépôt d'origine</h3>
+                    <p>Qu'arrive-t-il si le dépôt d'origine change ? Vous voudrez pouvoir tirer ces changements localement. Nous allons donc ajouter un autre remote, cette fois-ci à version originale du projet, github.com/jlord/patchwork.</p>
+                    <p>Vous pouvez nommer ce dépôt comme vous voulez, mais généralement le nom utilisé est 'upstream'; Utilisons cette méthode:<br/>
+                    <em class="emspace">git remote add upstream https://github.com/jlord/patchwork.git</em></p>
+                </div>
+            </div>
+        </section>
+    
+</html>

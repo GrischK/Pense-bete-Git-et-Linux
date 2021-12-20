@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Fiche de révision Linux</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <nav class="flex-container">
+            <a href="home.html"><img src="img/logo.png" alt="logoeduc" id="logo" /></a>
+            <ul id="flex-container2">
+                <li><a href="home.html">Accueil</a></li>
+                <li>|</li>
+                <li><a href="Git.html">Git</a></li>
+                <li>|</li>
+                <li><a href="Linux.html">Linux</a></li>
+                <li>|</li>
+                <li><a href="Rules.html">Les autres règles</a></li>
+            </ul>
+        </nav>
+        <section id="blocintro">
+            <h1>Révisions des principales notions de Linux</h1>
+            <p>Pour ce rappel, j'ai utilisé la ressource <a href="https://github.com/jgm/gitit/archive/refs/heads/master.zip">GitIt.</a></p>
+        </section>
+
+        <div id=space>
+        </div>
+
+        <section id="linuxtext">
+            <div id="linuxtextblock">
+                <div class="border">
+                    <h2>1.Démarrer avec Linux</h2>
+                    <h3>Le login</h3>
+                    <p>Il faut d'abord se logger:<br/>
+                    <em class="emspace">mateo21-desktop login:</em></p>
+                    <p><span class="squarestyle">mateo21-desktop</span> : c'est le nom qu'on a donné à notre ordinateur lors de l'installation. Notre ordinateur se présente et nous rappelle où nous sommes, en quelque sorte.</p>
+                    <p>Entrez le login: dans mon cas GrischK </p>
+                    <p>On nous demande ensuite notre mot de passe.</p>
+                </div>
+
+                <div class="border">
+                    <h2>2.Entrer une commande</h2>
+                    <h3>L'invite de commandes</h3>
+                    <p>On travaille dans la console en tapant ce qu'on appelle des commandes.<br/>
+                    Les paramètres sont des options que l'on écrit à la suite de la commande. La commande et les paramètres sont séparés par un espace.<br/>
+                    Certains paramètres nécessitent que vous les complétiez avec une valeur.</p>
+                    <h3>Autocomplétion de commande</h3>
+                    <p>Le premier « truc » à connaître, c'est l'autocomplétion de commande. Prenons la commande <span class="squarestyle">date</span> par exemple.<br/>
+                    Taper juste « <span class="squarestyle">da</span> » dans la console, puis tapez deux fois sur la touche Tabulation 
+                    <h3>L'historique des commandes</h3>
+                    <p>Appuyer sur la flèche directionnelle <span class="squarestyle">haut</span>. On verra apparaître la dernière commande qu'on a tapée.<br/>
+                    Si on appuie sur la flèche directionnelle <span class="squarestyle">bas</span>, on reviendra aux commandes les plus récentes.<br/>
+
+                    <h3>Les différentes commandes et paramètres</h3>
+                    <p>Les commandes :</p>
+                    <ul id="linuxcommandlist">
+                        <li><span class="squarestyle">pwd</span> : afficher le dossier actuel</li>
+                        <li><span class="squarestyle">ls</span> : lister les fichiers et dossiers</li>
+                        <li><span class="squarestyle">cd</span> : changer de dossier</li>
+                        <li><span class="squarestyle">du</span> : taille des dossiers</li>
+                        <li><span class="squarestyle">cat</span> : afficher tout le fichier</li>
+                        <li><span class="squarestyle">less</span> : afficher les fichiers page par page</li>
+                        <li><span class="squarestyle">head</span> : afficher le début du fichier</li>
+                        <li><span class="squarestyle">tail</span> : afficher la fin du fichier</li>
+                        <li><span class="squarestyle">touch</span> : créer un fichier</li>
+                        <li><span class="squarestyle">mkdir</span> : créer un dossier</li>
+                        <li><span class="squarestyle">cp</span> : copier un fichier <br/>
+                        (ex: cp fichierbidon fichiercopie = "fichiercopie" est le nouveau nom <br/>
+                        cp fichierbidon mondossier/ = fichierbidon sera copié dans mondossier sous le même nom<br/>
+                        cp fichierbidon mondossier/fichiercopie = fichierbidon sera copié dans mondossier sous le nom fichiercopie<br/>
+                        cp -R animaux = avec attribut -R cela copie le dossier animaux)</li>
+                        <li><span class="squarestyle">mv</span> : déplacer un fichier / renommer un fichier<br/>
+                        (ex: mv animaux/ mondossier/ =  déplacera le dossieranimaux dans mondossier<br/>
+                        mv fichierbidon superfichier = renommera fichierbidon en superfichier<br/>
+                        mv fichierbidon mondossier/superfichier = déplacera fichierbidon dans mondossier tout en lui affectant un nouveau nom)</li>
+                        <li><span class="squarestyle">rm</span> : supprimer des fichiers et dossiers </li>
+                        <li><span class="squarestyle">ln</span> : créer des liens <br/>
+                        (ex: </li>
+                    </ul>
+
+                    <p>Les paramètres :</p>
+                    <ul id="linuxcommandlist">
+                        <li><span class="squarestyle">-a</span> (all) tout sélectionner</li>
+                        <li><span class="squarestyle">-n</span> affiche les numéros de ligne</li>
+                        <li><span class="squarestyle">-f</span> suivre évolutions et changements d'un fichier</li>
+                        <li><span class="squarestyle">-r -R</span> dossier </li>
+                        <li><span class="squarestyle">*</span> joker ou wildcard <br/>
+                        (ex: cp *.jpg mondossier/ = copie tous les.jpg dans un sous-dossier<br/>
+                        cp so* mondossier/ = copie tous les fichiers commençant par so) <br/></li>
+                        <li><span class="squarestyle">-i</span> demande une confirmation </li>
+                        <li><span class="squarestyle">-v</span> demande à la commande de dire ce qu'elle est en train de faire </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+</html>
